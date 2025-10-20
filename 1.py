@@ -9,7 +9,7 @@ from keep_alive import keep_alive
 
 colorama_init(autoreset=True)
 
-# 🔹 Replace this with your own GitHub raw link
+# 🔹 GitHub RAW token link
 TOKENS_URL = "https://raw.githubusercontent.com/rajsonugupta11/auto-spin-bot/main/tokens.txt"
 BALANCE_URL = "https://zero-api.kaisar.io/user/balances?symbol=point"
 SPIN_URL = "https://zero-api.kaisar.io/lucky/spin"
@@ -114,6 +114,7 @@ async def worker(token, target, name, color):
             if balance >= 300:
                 await buy_ticket(session, headers, 1, name, color)
             else:
+                print(f"{color}[{name}] ⚠ Insufficient balance. Waiting 50s...")
                 await asyncio.sleep(50)
                 continue
 
@@ -143,7 +144,8 @@ async def main():
     while True:
         print(f"{Fore.CYAN}🚀 New 24-hour cycle started")
         await run_cycle()
-        print(f"{Fore.MAGENTA}Sleeping 24 hours before next refresh...")
+        print(f"{Fore.MAGENTA}💤 Sleeping 24 hours before next refresh...")
         await asyncio.sleep(24 * 3600)
 
 asyncio.run(main())
+            
