@@ -132,7 +132,7 @@ async def fetch_tokens():
 
 async def run_cycle():
     tokens = await fetch_tokens()
-    target = 100000
+    target = 999999999999999999999999999
     tasks = []
     for i, token in enumerate(tokens):
         color = ACCOUNT_COLORS[i % len(ACCOUNT_COLORS)]
