@@ -10,8 +10,7 @@ from keep_alive import keep_alive
 colorama_init(autoreset=True)
 
 # 🔹 Replace this with your own GitHub raw link
-TOKENS_URL = "https://raw.githubusercontent.com/<YOUR_USERNAME>/<YOUR_REPO>/main/tokens.txt"
-
+TOKENS_URL = "https://raw.githubusercontent.com/rajsonugupta11/auto-spin-bot/main/tokens.txt"
 BALANCE_URL = "https://zero-api.kaisar.io/user/balances?symbol=point"
 SPIN_URL = "https://zero-api.kaisar.io/lucky/spin"
 CONVERT_URL = "https://zero-api.kaisar.io/lucky/convert"
