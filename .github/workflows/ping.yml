@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Ping the Render server
         run: |
-          curl -sS --max-time 10 "https://auto-spin-bot2.onrender.com/" || true
+          curl -I https://auto-spin-bot-lt7x.onrender.com || true
